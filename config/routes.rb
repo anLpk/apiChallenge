@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: "orders#new"
+  root to: "orders#show"
 end
