@@ -1,15 +1,55 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+$font-family: "Roboto", sans-serif;
+$red: #fd1015;
+$blue: #167ffb;
+$yellow: #ffc65a;
+$orange: #e67e22;
+$green: #1edd88;
+$gray: #808080;
+$light-gray: #f4f4f4;
+$white: #fff;
+$tomato: #ff6347;
+// Font-Family
+body {
+  font-family: $font-family;
+  opacity: 0.6;
+}
+
+header {
+  width: 100%;
+  border: 1px solid $gray;
+
+  h1 {
+    text-align: left;
+    margin-left: 7em;
+    font-weight: 400;
+  }
+}
+
+section {
+  width: 70%;
+  border: 1px solid $gray;
+  margin: 2rem auto 1rem;
+
+  #head-title {
+    border-bottom: 1px solid $gray;
+    padding-left: 0.3em;
+  }
+}
+
+.first-line-container,
+.second-line-container {
+  margin-top: -0.5em;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.7px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.printed {
+  color: $orange;
+}
+.approved {
+  color: $blue;
+}

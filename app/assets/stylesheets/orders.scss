@@ -1,25 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+$font-family: "Roboto", sans-serif;
+$red: #fd1015;
+$blue: #167ffb;
+$yellow: #ffc65a;
+$orange: #e67e22;
+$green: #1edd88;
+$gray: #0e0000;
+$light-gray: #f4f4f4;
+$white: #fff;
+$tomato: #ff6347;
+// Font-Family
+body {
+  font-family: $font-family;
+}
+
 header {
   width: 100%;
-  border: 1px solid lightgray;
+  border: 1px solid $light-gray;
+
   h1 {
     text-align: left;
     margin-left: 7em;
-    opacity: 0.7;
-    font-weight: lighter;
+    opacity: 0.8;
   }
 }
 
 section {
   width: 70%;
-  border: 1px solid lightgray;
+  border: 1px solid $light-gray;
   margin: 2rem auto 4rem;
 
   #head-title {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid $light-gray;
+    padding-left: 0.3em;
   }
 }
 
-.content-container {
+.first-line-container,
+.second-line-container {
   display: flex;
   justify-content: space-between;
+  line-height: 0.7px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  p {
+    opacity: 0.6;
+  }
+}
+
+.printed {
+  color: $orange;
+}
+.approved {
+  color: $blue;
 }
