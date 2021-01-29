@@ -35,3 +35,6 @@
 yarn-debug.log*
 .yarn-integrity
 .env*
+
+# API key is this file/path
+/config/application.yml
