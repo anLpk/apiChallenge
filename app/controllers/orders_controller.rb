@@ -1,16 +1,25 @@
 require 'json'
-
 class OrdersController < ApplicationController
+  URL = "https://app.realhublive.com/api/v2/"
   def show
-    @orders = get_data
-    raise
+    @agencies = agencies_name
+    @campaigns = campaing_address
+    @orders = order_items
   end
 
-    
   private
-  def get_data
-    url = "https://app.realhublive.com/api/v2/"
-    response = RestClient.get(url + "orders.json?include_order_items=true", {"x-api-token".to_sym => ENV["API_KEY"]})
+  def agencies_name
+    response = RestClient.get(URL + "agencies.json?", {"x-api-token".to_sym => ENV["API_KEY"]})
+    JSON.parse(response)
+  end
+
+  def campaing_address
+    response = RestClient.get(URL + "campaigns/", {"x-api-token".to_sym => ENV["API_KEY"]})
+    JSON.parse(response)
+  end
+
+  def order_items
+    response = RestClient.get(URL + "orders.json", {"x-api-token".to_sym => ENV["API_KEY"]})
     JSON.parse(response)
   end
 end
